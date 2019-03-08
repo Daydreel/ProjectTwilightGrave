@@ -14,7 +14,7 @@ public class IsGrounded : Decision
 
     public override bool Decide(DayFSM fsm)
     {
-        //Debug.Log(fsm.playerfsm.CheckIsGround());
+        Debug.Log(fsm.entityB.CheckIsGround());
         return fsm.entityB.CheckIsGround();
     }
 }

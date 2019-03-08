@@ -47,7 +47,12 @@ public class TimerManager : Singleton<TimerManager>
     public void StopTimer()
     {
         PauseTimer();
-        time = 0;
+        ResetTimer();
+    }
+
+    public void ResetTimer(float value = 0)
+    {
+        time = value;
     }
 
     public void CountDown(float value)

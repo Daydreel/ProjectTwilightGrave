@@ -12,6 +12,8 @@ public enum PlayerMoveSet
     Land
 }
 
+[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Animator))]
 public class EntityBehaviour : MonoBehaviour {
 
     private Animator animator;
@@ -48,7 +50,7 @@ public class EntityBehaviour : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         fsm.Update();
-
+        Debug.Log("IsGrounded: " + CheckIsGround());
     }
 
     private void FixedUpdate()
