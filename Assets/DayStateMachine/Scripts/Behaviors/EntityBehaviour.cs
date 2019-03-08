@@ -9,9 +9,12 @@ public enum PlayerMoveSet
     Run,
     Jump,
     Fall,
-    Land
+    Land,
+    Attack,
+    Execution
 }
 
+//List every Player Inpput names as written in the input manager
 public enum PlayerInput
 {
     Jump,

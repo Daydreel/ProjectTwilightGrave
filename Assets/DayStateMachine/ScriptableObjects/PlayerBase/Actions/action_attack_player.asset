@@ -9,12 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 086f4bb03b93d6a41bec94fb12aff1a3, type: 3}
-  m_Name: states_attack_player
+  m_Script: {fileID: 11500000, guid: b2f878c44c30bc343afeb0eb1494fafe, type: 3}
+  m_Name: action_attack_player
   m_EditorClassIdentifier: 
-  isPhysic: 0
-  onEnters: []
-  onExits: []
-  actions:
-  - {fileID: 11400000, guid: 876c462dad22e9d4e9557c257b793a37, type: 2}
-  transitions: []

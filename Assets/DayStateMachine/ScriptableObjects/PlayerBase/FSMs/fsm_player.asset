@@ -13,6 +13,11 @@ MonoBehaviour:
   m_Name: fsm_player
   m_EditorClassIdentifier: 
   currentState: {fileID: 11400000, guid: 3527af9a7ffc74241aeb0155a6c2782c, type: 2}
-  states: []
+  states:
+  - {fileID: 11400000, guid: 3527af9a7ffc74241aeb0155a6c2782c, type: 2}
+  - {fileID: 11400000, guid: a7a2ed992aadbe0418133a15180161eb, type: 2}
+  - {fileID: 11400000, guid: 22ab515428f8c3c4f8e1c8979269d8bd, type: 2}
+  - {fileID: 11400000, guid: b665e73165ce095478c907b2661771fa, type: 2}
+  - {fileID: 11400000, guid: 9139fb779708ea34a8c812ffb5f9c6f8, type: 2}
   entityB: {fileID: 0}
   animator: {fileID: 0}
