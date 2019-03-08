@@ -11,7 +11,7 @@ public class BoolAnimTrue : OnEnter
 
     public override void Act(DayFSM fsm)
     {
-        Debug.Log(this);
+        //Debug.Log(this);
 
         //Need to add an animation Trigger to the move set
         fsm.animator.SetBool(animName.ToString(), true);

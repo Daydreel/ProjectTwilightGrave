@@ -7,6 +7,6 @@ public class Attack : Action
 {
     public override void Act(DayFSM FSM)
     {
-        Debug.Log("Attack");
+        //Debug.Log("Attack TODO");
     }
 }

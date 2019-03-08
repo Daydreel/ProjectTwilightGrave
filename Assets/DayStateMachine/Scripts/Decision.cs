@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class Decision : ScriptableObject {
-    public virtual void Initialize(DayFSM FSM)
+    public virtual void Initialise(DayFSM FSM)
     {
 
     }

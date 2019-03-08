@@ -15,22 +15,23 @@ public class DecisionTimer : Decision
         if (timerManager == null)
         {
             Debug.Log(timerManager);
+            Initialise(fsm);
         }
 
         if (timerManager.time >= Duration)
         {
-            Debug.Log("timerManager True");
+            //Debug.Log("timerManager True");
             return true;
         }
 
         return false;
-        
     }
 
-    public override void Initialize(DayFSM fsm)
+    public override void Initialise(DayFSM fsm)
     {
         timerManager = TimerManager.Instance;
         timerManager.StartTimer();
+        //Debug.Log("Initialize Timer");
     }
 
     public override void Terminate(DayFSM fsm)

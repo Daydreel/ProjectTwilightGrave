@@ -36,6 +36,7 @@ public class TimerManager : Singleton<TimerManager>
 
     public void StartTimer()
     {
+        ResetTimer();
         isTimerOn = true;
     }
 

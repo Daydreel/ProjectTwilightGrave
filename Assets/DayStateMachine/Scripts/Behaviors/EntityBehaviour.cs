@@ -60,7 +60,7 @@ public class EntityBehaviour : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         fsm.Update();
-        Debug.Log("IsGrounded: " + CheckIsGround());
+        //Debug.Log("IsGrounded: " + CheckIsGround());
     }
 
     private void FixedUpdate()
