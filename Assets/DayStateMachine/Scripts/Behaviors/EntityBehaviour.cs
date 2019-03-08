@@ -12,6 +12,13 @@ public enum PlayerMoveSet
     Land
 }
 
+public enum PlayerInput
+{
+    Jump,
+    Attack,
+    Execution
+}
+
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(Animator))]
 public class EntityBehaviour : MonoBehaviour {

@@ -9,7 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efbb58bdf43c2424d8cbb193ea29f2f1, type: 3}
-  m_Name: decision_jumpTimer_player
+  m_Script: {fileID: 11500000, guid: 086f4bb03b93d6a41bec94fb12aff1a3, type: 3}
+  m_Name: states_attack_player
   m_EditorClassIdentifier: 
-  Duration: 0.5
+  isPhysic: 0
+  onEnters: []
+  onExits: []
+  actions: []
+  transitions: []
