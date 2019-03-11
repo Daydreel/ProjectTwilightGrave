@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: states_run_player
   m_EditorClassIdentifier: 
   isPhysic: 1
+  ForceStayInState: {fileID: 0}
   onEnters:
   - {fileID: 11400000, guid: a984aaa9f32a4a44db05aee897570447, type: 2}
   onExits:
@@ -24,3 +25,5 @@ MonoBehaviour:
     nextState: {fileID: 11400000, guid: 3527af9a7ffc74241aeb0155a6c2782c, type: 2}
   - decision: {fileID: 11400000, guid: 8f7918ce85abea44694f2f2fe8e48c2d, type: 2}
     nextState: {fileID: 11400000, guid: 22ab515428f8c3c4f8e1c8979269d8bd, type: 2}
+  - decision: {fileID: 11400000, guid: c348a5e395a8fed44b51a269bc7c4a66, type: 2}
+    nextState: {fileID: 11400000, guid: 9139fb779708ea34a8c812ffb5f9c6f8, type: 2}

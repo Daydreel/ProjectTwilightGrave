@@ -13,8 +13,14 @@ MonoBehaviour:
   m_Name: states_attack_player
   m_EditorClassIdentifier: 
   isPhysic: 0
-  onEnters: []
+  ForceStayInState: {fileID: 11400000, guid: 9943d17dd5a0ebf4ea84b6544ce465e9, type: 2}
+  onEnters:
+  - {fileID: 11400000, guid: 7b059b9382e16d04e97052e9f1036e81, type: 2}
   onExits: []
   actions:
-  - {fileID: 11400000, guid: 876c462dad22e9d4e9557c257b793a37, type: 2}
-  transitions: []
+  - {fileID: 11400000, guid: 15d19604fa159514093ce40bf4449b22, type: 2}
+  transitions:
+  - decision: {fileID: 11400000, guid: 15f8f1d8b0e66c94484b841daddaaf59, type: 2}
+    nextState: {fileID: 11400000, guid: 3527af9a7ffc74241aeb0155a6c2782c, type: 2}
+  - decision: {fileID: 11400000, guid: a9b3ee43aca83ea4689bc0d15ed51e4c, type: 2}
+    nextState: {fileID: 11400000, guid: a7a2ed992aadbe0418133a15180161eb, type: 2}

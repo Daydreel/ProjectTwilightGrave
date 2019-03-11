@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: edda758f1bb08fa42a6d88bf73c3595d, type: 3}
-  m_Name: enter_attackTrigger_player 1
+  m_Name: enter_executionTrigger_player
   m_EditorClassIdentifier: 
-  animName: 0
+  animName: 6
