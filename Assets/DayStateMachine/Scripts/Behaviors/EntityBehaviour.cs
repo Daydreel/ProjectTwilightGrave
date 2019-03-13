@@ -53,7 +53,6 @@ public class EntityBehaviour : MonoBehaviour {
         animator = GetComponent<Animator>();
         cam = Camera.main;
         body = GetComponent<Rigidbody>();
-
         inputBuffer = new DayInputBuffer();
         
         if (fsm != null)
