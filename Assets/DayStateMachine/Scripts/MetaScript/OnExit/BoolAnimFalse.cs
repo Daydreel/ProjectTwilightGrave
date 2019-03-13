@@ -11,7 +11,7 @@ public class BoolAnimFalse : OnExit
 
     public override void Act(DayFSM fsm)
     {
-        Debug.Log(this);
+        //Debug.Log(this);
         //Need to add an animation Trigger to the move set
         fsm.animator.SetBool(animName.ToString(), false);
     }

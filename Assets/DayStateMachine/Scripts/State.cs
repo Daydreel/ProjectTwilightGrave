@@ -22,24 +22,48 @@ public class State : ScriptableObject {
     //The UpdateState is called every frame
     public void UpdateState(DayFSM FSM)
     {
-        //Go through all registered actions
-        foreach (Action action in actions)
+        if (!isPhysic)
         {
-            #region Warnings
-            //Some warnings
-            if (action == null)
+            //Go through all registered actions
+            foreach (Action action in actions)
             {
-                Debug.LogWarning("Carefull, you have setup an empty action !! check this state again : " + this);
-            }
-            #endregion
+                #region Warnings
+                //Some warnings
+                if (action == null)
+                {
+                    Debug.LogWarning("Carefull, you have setup an empty action !! check this state again : " + this);
+                }
+                #endregion
 
-            action.Act(FSM);
+                action.Act(FSM);
+            }
         }
 
         //Check if there is a Decision for Force Stay in state or if ForceStayInState is true
         if (ForceStayInState == null || ForceStayInState.Decide(FSM))
         {
             CheckTransitions(FSM);
+        }
+    }
+
+    //The UpdateState is called every frame
+    public void PhysicUpdateState(DayFSM FSM)
+    {
+        if (isPhysic)
+        {
+            //Go through all registered actions
+            foreach (Action action in actions)
+            {
+                #region Warnings
+                //Some warnings
+                if (action == null)
+                {
+                    Debug.LogWarning("Carefull, you have setup an empty action !! check this state again : " + this);
+                }
+                #endregion
+
+                action.Act(FSM);
+            }
         }
     }
 

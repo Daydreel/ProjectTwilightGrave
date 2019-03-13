@@ -30,10 +30,11 @@ public class EntityStats : ScriptableObject {
     public float MoveSpeed = 5.0f;//TODO
     //Jump
     public float JumpHeight = 10.0f;//TODO
-    public float JumpSpeed = 10.0f;//TODO
+    //public float JumpSpeed = 10.0f;
 
     //Rotation speed
     public float rotationSpeed = 2.0f;
 
-
+    //Dodge stats
+    public float dodgeDistance = 5.0f;
 }

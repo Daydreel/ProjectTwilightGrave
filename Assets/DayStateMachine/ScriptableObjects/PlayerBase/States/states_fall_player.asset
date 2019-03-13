@@ -13,9 +13,13 @@ MonoBehaviour:
   m_Name: states_fall_player
   m_EditorClassIdentifier: 
   isPhysic: 0
-  onEnters: []
-  onExits: []
-  actions: []
+  ForceStayInState: {fileID: 0}
+  onEnters:
+  - {fileID: 11400000, guid: 9d60b2301ff105e4d99bc5fc6220180d, type: 2}
+  onExits:
+  - {fileID: 11400000, guid: 845b4a15ede67e740937322b0d998f00, type: 2}
+  actions:
+  - {fileID: 11400000, guid: a4b456f504e615445915409faf688b2c, type: 2}
   transitions:
   - decision: {fileID: 11400000, guid: a6051eb2bcf69164faea1f9343568885, type: 2}
     nextState: {fileID: 11400000, guid: 3527af9a7ffc74241aeb0155a6c2782c, type: 2}

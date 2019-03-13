@@ -23,6 +23,6 @@ MonoBehaviour:
   MaxMagic: 300
   CurrentMagic: 0
   MoveSpeed: 5
-  JumpHeight: 10
-  JumpSpeed: 10
+  JumpHeight: 15
   rotationSpeed: 5
+  dodgeDistance: 10

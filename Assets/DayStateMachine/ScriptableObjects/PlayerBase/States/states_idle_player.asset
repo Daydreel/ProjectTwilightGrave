@@ -25,3 +25,7 @@ MonoBehaviour:
     nextState: {fileID: 11400000, guid: 22ab515428f8c3c4f8e1c8979269d8bd, type: 2}
   - decision: {fileID: 11400000, guid: c348a5e395a8fed44b51a269bc7c4a66, type: 2}
     nextState: {fileID: 11400000, guid: 9139fb779708ea34a8c812ffb5f9c6f8, type: 2}
+  - decision: {fileID: 11400000, guid: 5c800af0a1260554bb4e25532f689460, type: 2}
+    nextState: {fileID: 11400000, guid: a12305ed31d5f46479a287bd65981390, type: 2}
+  - decision: {fileID: 11400000, guid: fc21ff2d2833b1c4e8b0893b8a0f91c9, type: 2}
+    nextState: {fileID: 11400000, guid: 7d3e9939939ba404bb9d85e456483330, type: 2}

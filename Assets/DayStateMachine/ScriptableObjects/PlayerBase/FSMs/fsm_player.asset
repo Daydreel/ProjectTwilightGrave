@@ -19,5 +19,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 22ab515428f8c3c4f8e1c8979269d8bd, type: 2}
   - {fileID: 11400000, guid: b665e73165ce095478c907b2661771fa, type: 2}
   - {fileID: 11400000, guid: 9139fb779708ea34a8c812ffb5f9c6f8, type: 2}
+  - {fileID: 11400000, guid: a12305ed31d5f46479a287bd65981390, type: 2}
+  - {fileID: 11400000, guid: 7d3e9939939ba404bb9d85e456483330, type: 2}
   entityB: {fileID: 0}
   animator: {fileID: 0}

@@ -11,15 +11,17 @@ public enum PlayerMoveSet
     Fall,
     Land,
     Attack,
-    Execution
+    Execution,
+    Dodge
 }
 
 //List every Player Inpput names as written in the input manager
 public enum PlayerInput
 {
-    Jump,
-    Attack,
-    Execution
+    Jump, // X
+    Attack, // Square
+    Execution, // Triangle
+    Dodge // Circle
 }
 
 [RequireComponent(typeof(Rigidbody))]
@@ -30,7 +32,11 @@ public class EntityBehaviour : MonoBehaviour {
 
     public EntityStats entityS;
    
+    //The state machine reference
     public DayFSM fsm;
+
+    //Input buffer recorded for some milliseconds
+    public DayInputBuffer inputBuffer;
 
     [HideInInspector]
     public Camera cam;
@@ -48,6 +54,7 @@ public class EntityBehaviour : MonoBehaviour {
         cam = Camera.main;
         body = GetComponent<Rigidbody>();
 
+        inputBuffer = new DayInputBuffer();
         
         if (fsm != null)
         {
@@ -59,6 +66,7 @@ public class EntityBehaviour : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        inputBuffer.Listen();
         fsm.Update();
         //Debug.Log("IsGrounded: " + CheckIsGround());
     }

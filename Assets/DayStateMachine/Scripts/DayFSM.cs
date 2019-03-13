@@ -25,10 +25,6 @@ public class DayFSM : ScriptableObject
     //Call in the update of the GameObject fsm
     public void Update()
     {
-        //If the state is physic related then FixedUpdate is used instead of Update
-        if (currentState.isPhysic)
-            return;
-
         if (currentState == null)
         {
             Debug.LogError("No State");
@@ -37,7 +33,6 @@ public class DayFSM : ScriptableObject
         {
             currentState.UpdateState(this);
         }
-
     }
 
     //Call in the update of the GameObject fsm
@@ -53,9 +48,8 @@ public class DayFSM : ScriptableObject
         }
         else
         {
-            currentState.UpdateState(this);
+            currentState.PhysicUpdateState(this);
         }
-
     }
 
     public void TransitionToState(State nextState)

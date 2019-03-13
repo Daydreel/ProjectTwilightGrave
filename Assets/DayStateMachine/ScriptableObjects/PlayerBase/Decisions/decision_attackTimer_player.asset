@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efbb58bdf43c2424d8cbb193ea29f2f1, type: 3}
   m_Name: decision_attackTimer_player
   m_EditorClassIdentifier: 
-  Duration: 1
+  Duration: 0.8

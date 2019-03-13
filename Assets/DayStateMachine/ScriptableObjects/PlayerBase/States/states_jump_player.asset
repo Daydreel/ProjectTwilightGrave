@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 086f4bb03b93d6a41bec94fb12aff1a3, type: 3}
   m_Name: states_jump_player
   m_EditorClassIdentifier: 
-  isPhysic: 0
+  isPhysic: 1
+  ForceStayInState: {fileID: 0}
   onEnters:
   - {fileID: 11400000, guid: 97c061fef23328a4381bb56d99acdf71, type: 2}
   onExits: []

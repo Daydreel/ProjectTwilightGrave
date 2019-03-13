@@ -1,13 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 [CreateAssetMenu(menuName = "DayFSM/Actions/Jump")]
 public class Jump : Action
 {
     public AnimationCurve animCurve;
-    public UnityEvent JumpEvent;
 
     //Privates
     float t;
@@ -37,12 +35,5 @@ public class Jump : Action
         {
             body.MovePosition(body.position + Vector3.up * jumpHeight * Time.deltaTime * animCurve.Evaluate(t));
         }
-        //If jumping is finished
-        else
-        {
-            JumpEvent.Invoke();
-        }
     }
-
-
 }

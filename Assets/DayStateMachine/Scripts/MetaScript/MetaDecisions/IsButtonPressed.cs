@@ -11,9 +11,15 @@ public class IsButtonPressed : Decision
     public override bool Decide(DayFSM FSM)
     {
         //Debug.Log("IsGrounded" + fsm.entityB.CheckIsGround());
-        if (Input.GetButtonDown(playerInput.ToString()))
+        Queue<PlayerInput> buffer = FSM.entityB.inputBuffer.buffer;
+        
+        foreach (var input in buffer)
         {
-            return true;
+            if (Input.GetButtonDown(playerInput.ToString()))
+            {
+                buffer.Clear();
+                return true;
+            }
         }
         return false;
     }
