@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e47f8698e4913f342b5b9f14a4af1539, type: 3}
+  m_Name: fsm_angerBoss
+  m_EditorClassIdentifier: 
+  currentState: {fileID: 11400000, guid: 20a25f923df349d429f3b7ae51d01160, type: 2}
+  states:
+  - {fileID: 11400000, guid: 5e5a15ef6f9fa65458490bce9995d136, type: 2}
+  - {fileID: 11400000, guid: 20a25f923df349d429f3b7ae51d01160, type: 2}
+  - {fileID: 11400000, guid: 9e832ef2ee7527c4dac324f8ee3b7f70, type: 2}
+  entityB: {fileID: 0}
+  bossB: {fileID: 0}
+  animator: {fileID: 0}

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 086f4bb03b93d6a41bec94fb12aff1a3, type: 3}
+  m_Name: state_idle_bossAnger
+  m_EditorClassIdentifier: 
+  isPhysic: 0
+  ForceStayInState: {fileID: 0}
+  onEnters: []
+  onExits: []
+  actions: []
+  transitions:
+  - decision: {fileID: 11400000, guid: 2c50c6211fd3b5e488bc45800c742a6b, type: 2}
+    nextState: {fileID: 11400000, guid: 20a25f923df349d429f3b7ae51d01160, type: 2}

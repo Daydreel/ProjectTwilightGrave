@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "DayFSM/Actions/Attack")]
-public class Attack : Action
+[CreateAssetMenu(menuName = "DayFSM/Boss/Actions/Combo1")]
+public class Combo1 : Action
 {
     public override void Act(DayFSM FSM)
     {
-        Debug.Log("Attack TODO");
+        Debug.Log("Combo1");
     }
 }

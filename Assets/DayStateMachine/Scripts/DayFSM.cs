@@ -14,9 +14,11 @@ public class DayFSM : ScriptableObject
     [HideInInspector]
     public EntityBehaviour entityB;
     [HideInInspector]
+    public BossBehaviour bossB;
+    [HideInInspector]
     public Animator animator;
 
-    void Start()
+    public void Start()
     {
         //Enters the state !
         currentState.onEnterState(this);

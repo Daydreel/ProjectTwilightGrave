@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 733da80908d00e044993e5c5857bcbe6, type: 3}
   m_Name: enter_fallTrue_player
   m_EditorClassIdentifier: 
-  animName: 3
+  animName: 4

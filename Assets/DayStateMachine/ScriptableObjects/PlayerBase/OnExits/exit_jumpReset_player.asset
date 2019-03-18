@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f06afdd23e29ce4cad661b1a510e8bc, type: 3}
   m_Name: exit_jumpReset_player
   m_EditorClassIdentifier: 
-  animName: 2
+  animName: 3

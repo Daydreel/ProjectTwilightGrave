@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c9d5cc80da57ce47a44adeafa002ef9, type: 3}
   m_Name: exit_fall_False_player
   m_EditorClassIdentifier: 
-  animName: 3
+  animName: 4

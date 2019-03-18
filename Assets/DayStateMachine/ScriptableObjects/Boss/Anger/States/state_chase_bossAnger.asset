@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 086f4bb03b93d6a41bec94fb12aff1a3, type: 3}
+  m_Name: state_chase_bossAnger
+  m_EditorClassIdentifier: 
+  isPhysic: 0
+  ForceStayInState: {fileID: 0}
+  onEnters:
+  - {fileID: 11400000, guid: 5fa3d022e3097174c87da3e344ce7eb1, type: 2}
+  onExits:
+  - {fileID: 11400000, guid: 7e08e3bc7f29fb04b909c2dff6306040, type: 2}
+  actions:
+  - {fileID: 11400000, guid: 92fe1dbe4e61afb4491851c431a9349e, type: 2}
+  transitions:
+  - decision: {fileID: 11400000, guid: fada0f7ebe3dd8c4495f522b12987d63, type: 2}
+    nextState: {fileID: 11400000, guid: 9e832ef2ee7527c4dac324f8ee3b7f70, type: 2}

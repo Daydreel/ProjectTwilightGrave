@@ -22,6 +22,7 @@ public class State : ScriptableObject {
     //The UpdateState is called every frame
     public void UpdateState(DayFSM FSM)
     {
+
         if (!isPhysic)
         {
             //Go through all registered actions
@@ -100,8 +101,11 @@ public class State : ScriptableObject {
                 Debug.LogWarning("Carefull, you have setup an empty action !! check this state again : " + this);
             }
             #endregion
+            if (action != null)
+            {
+                action.Initialise(FSM);
+            }
             
-            action.Initialise(FSM);
         }
 
         //Initialise Decision State 
@@ -145,7 +149,7 @@ public class State : ScriptableObject {
     private void CheckTransitions(DayFSM FSM)
     {
         foreach (Transition transition in transitions)
-        {
+        { 
             bool decisionSucceeded = transition.decision.Decide(FSM);
 
             if (decisionSucceeded)

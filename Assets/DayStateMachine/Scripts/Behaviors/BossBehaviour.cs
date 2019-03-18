@@ -1,37 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
-//The list of every animation triggers that the character can do.
-public enum PlayerMoveSet
+
+public enum DistanceType
+{
+    CAC,
+    MID,
+    LONG
+}
+
+public enum BossAngerMoveSet
 {
     Null,
-    Idle,
     Run,
-    Jump,
-    Fall,
-    Land,
-    Attack,
-    Execution,
-    Dodge
+    Combo1,
+    Combo2,
+    Combo3
 }
 
-//List every Player Inpput names as written in the input manager
-public enum PlayerInput
+[RequireComponent(typeof(BossBehaviour))]
+public class BossBehaviour : MonoBehaviour
 {
-    Jump, // X
-    Attack, // Square
-    Execution, // Triangle
-    Dodge // Circle
-}
+    //Get reference from the player
+    public GameObject target;
 
-
-public class EntityBehaviour : MonoBehaviour {
+    [HideInInspector]
+    public NavMeshAgent navMeshAgent;
 
     private Animator animator;
 
-    public EntityStats entityS;
-   
+    public BossStats bossStats;
+
     //The state machine reference
     public DayFSM fsm;
 
@@ -49,31 +50,34 @@ public class EntityBehaviour : MonoBehaviour {
     protected bool isGrounded = true;
 
     // Use this for initialization
-    public virtual void Start () {
+    void Start()
+    {
         animator = GetComponent<Animator>();
         cam = Camera.main;
         body = GetComponent<Rigidbody>();
         inputBuffer = new DayInputBuffer();
-        
+        navMeshAgent = GetComponent<NavMeshAgent>();
+
         if (fsm != null)
         {
             //Give player animator to state fsm
             fsm.animator = animator;
-            fsm.entityB = this;
+            fsm.bossB = this;
             fsm.Start();
 
             Debug.Log(this);
         }
     }
-	
-	// Update is called once per frame
-	protected virtual void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
         inputBuffer.Listen();
         fsm.Update();
         //Debug.Log("IsGrounded: " + CheckIsGround());
     }
 
-    protected void FixedUpdate()
+    void FixedUpdate()
     {
         fsm.FixedUpdate();
     }
@@ -82,5 +86,20 @@ public class EntityBehaviour : MonoBehaviour {
     {
         isGrounded = Physics.CheckSphere(transform.position + Vector3.up * 0.3f, 0.5f, groundLayer.value); //Need to check Layer Mask
         return isGrounded;
+    }
+
+    public float TargetDistance()
+    {
+        float value = 0;
+        value = Vector3.Distance(transform.position, target.transform.position);
+
+        return value;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position, bossStats.CACReach);
+        Gizmos.DrawWireSphere(transform.position, bossStats.MIDReach);
+        Gizmos.DrawWireSphere(transform.position, bossStats.LONGReach);
     }
 }

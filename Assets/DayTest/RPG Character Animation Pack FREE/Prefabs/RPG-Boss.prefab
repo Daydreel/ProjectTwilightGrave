@@ -10,12 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 400004}
   - component: {fileID: 9592804}
+  - component: {fileID: 1078335410}
   - component: {fileID: 5400000}
   - component: {fileID: 13681452}
-  - component: {fileID: 6090272626034761064}
+  - component: {fileID: 1078335409}
   m_Layer: 0
-  m_Name: RPG-Character
-  m_TagString: Player
+  m_Name: RPG-Boss
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,7 +47,7 @@ Animator:
   m_GameObject: {fileID: 100004}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
-  m_Controller: {fileID: 9100000, guid: ffc236c81bf1cbf42b5234b92f1404c1, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5977f8d74b137b14eb2731d710c18e59, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 1
   m_ApplyRootMotion: 0
@@ -55,6 +56,27 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1078335410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718fcd34297d1974699a2bdc2b4d3ed6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  navMeshAgent: {fileID: 0}
+  bossStats: {fileID: 0}
+  fsm: {fileID: 11400000, guid: 1287a0c63c555e24d9d502d11102c404, type: 2}
+  cam: {fileID: 0}
+  body: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!54 &5400000
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -85,25 +107,28 @@ CapsuleCollider:
   m_Height: 2.5
   m_Direction: 1
   m_Center: {x: 0, y: 1.25, z: 0}
---- !u!114 &6090272626034761064
-MonoBehaviour:
+--- !u!195 &1078335409
+NavMeshAgent:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100004}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 696454fe95d1d89449d37d14d04f41e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityS: {fileID: 11400000, guid: f1eaff3287c08be469b11e5e1e9e6a9f, type: 2}
-  fsm: {fileID: 11400000, guid: f3617068163f1f346846532fb7848f6b, type: 2}
-  cam: {fileID: 0}
-  body: {fileID: 0}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 512
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &102658
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,7 +332,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ad8c2bee857aaca4dbcf348b7e988a44, type: 2}
+  - {fileID: 2100000, guid: 615fb86467c80994480486214433a11b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

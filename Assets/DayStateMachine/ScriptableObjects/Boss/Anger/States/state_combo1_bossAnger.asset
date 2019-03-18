@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 086f4bb03b93d6a41bec94fb12aff1a3, type: 3}
+  m_Name: state_combo1_bossAnger
+  m_EditorClassIdentifier: 
+  isPhysic: 1
+  ForceStayInState: {fileID: 11400000, guid: 912a75980fc5cc94396d1c4c803a760c, type: 2}
+  onEnters:
+  - {fileID: 11400000, guid: ef56dc0c52732054098e8fbb73237f31, type: 2}
+  onExits: []
+  actions:
+  - {fileID: 11400000, guid: 662fd68b659226340bed4146651ece11, type: 2}
+  transitions:
+  - decision: {fileID: 11400000, guid: fada0f7ebe3dd8c4495f522b12987d63, type: 2}
+    nextState: {fileID: 11400000}
+  - decision: {fileID: 11400000, guid: a3a00b8e8ff3e6f43a16a4efdfb07a96, type: 2}
+    nextState: {fileID: 11400000, guid: 20a25f923df349d429f3b7ae51d01160, type: 2}
+  - decision: {fileID: 11400000, guid: 515f4178ddcb8d54995e11d0c7d40dbe, type: 2}
+    nextState: {fileID: 11400000, guid: 20a25f923df349d429f3b7ae51d01160, type: 2}
