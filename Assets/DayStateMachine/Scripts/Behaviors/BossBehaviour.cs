@@ -101,5 +101,7 @@ public class BossBehaviour : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, bossStats.CACReach);
         Gizmos.DrawWireSphere(transform.position, bossStats.MIDReach);
         Gizmos.DrawWireSphere(transform.position, bossStats.LONGReach);
+
+        Gizmos.DrawRay(transform.position,transform.forward * bossStats.LONGReach);
     }
 }
