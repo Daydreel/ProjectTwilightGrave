@@ -25,4 +25,4 @@ MonoBehaviour:
   MoveSpeed: 5
   JumpHeight: 15
   rotationSpeed: 5
-  dodgeDistance: 10
+  dodgeDistance: 50
